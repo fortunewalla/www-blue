@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="fortunewalla.github.io : Lets find our fortune!">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<!-- fwala octicons add-on-->
+    <link rel="stylesheet" href="octicons/octicons.css">
+
+    <title>fortuneWalla @ Github - Programming</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+         <!-- <a id="forkme_banner" href="https://github.com/fortunewalla">View on GitHub</a> -->
+
+          <h1 id="project_title">Programming guides, tips & tricks.</h1>
+          <h2 id="project_tagline"><a href="index.html" title="Data analytics, statistical analysis & predictive modeling"><span class="mega-octicon octicon-home"></span> Home</a> | <a href="http://fortunewalla.com" title="Data analytics, statistical analysis & predictive modeling"><span class="mega-octicon octicon-graph"></span> Data Science Blog</a> | <span class="mega-octicon octicon-device-desktop"></span> Programming | <a href="https://github.com/fortunewalla" title="fortuneWalla @ GitHub"><span class="mega-octicon octicon-mark-github"></span> Code Repository</a></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h3>
+<p> 
+<ol>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+<li>Tips</li>
+	<ul>
+	<li>Saving Educational videos for offline use.</li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	<li><a href="#">Save Videos for educational use.</a></li>
+	</ul>
+
+</ol>
+</p>
+
+
+<h3>Saving educational videos for offline use on GNU/Linux systems.</h3>
+<p> For students who study from online courses on YouTube. There is way to save videos for offline use, especially in places where the Internet is slow or unreliable. 
+
+In the code below, replace <code>2014.11.02.1</code> in the <abbr class="abbr" title="Uniform Resource Locator">URL</abbr> with the latest version from the website.
+
+</p>
+<pre><code> 
+$sudo wget https://yt-dl.org/downloads/2014.11.02.1/youtube-dl -O /usr/local/bin/youtube-dl
+$sudo chmod a+x /usr/local/bin/youtube-dl
+</code> </pre>
+<p>To verify the download to ensure integrity & prevent malicious execution of code. Use the commands below. There should be a match in the signature & the downloaded file. </p>
+<pre><code> 
+$sudo wget https://yt-dl.org/downloads/2014.11.02.1/youtube-dl.sig -O youtube-dl.sig
+$gpg --verify youtube-dl.sig /usr/local/bin/youtube-dl
+$rm youtube-dl.sig
+</code> </pre>
+
+<p>Create a configuration file <code>youtube-dl.conf</code> in the directory <code>/etc/</code>  and type the following code in it.</p> 
+
+<pre><code>
+-r 40K -auto-number --autonumber-size 3 -f 18 -o "~/Music/%(uploader)s - %(autonumber)s - %(title)s - %(upload_date)s -  %(id)s - %(extractor)s [%(format)s].%(ext)s"
+</code> </pre>
+
+<p> Run the command <code>$youtube-dl --help</code> to understand the above parameters.</p>
+
+<p>Go to your Youtube Channel & copy/paste the links of all the videos you wish to see for a later date. For e.g. In the channel
+
+<code>https://www.youtube.com/user/educatevirtually/playlists</code>, copy all the links from the playlist 'Statistical Analysis Basics' to a text file <code>datasciencevideos.txt</code>
+
+<pre><code>https://www.youtube.com/watch?v=dSnMhPdE41I
+https://www.youtube.com/watch?v=UyDuzJO1YRI
+https://www.youtube.com/watch?v=NdCDg_A84zw
+https://www.youtube.com/watch?v=UBbtWUXG1Bw
+https://www.youtube.com/watch?v=TMwSS8DAVYk
+https://www.youtube.com/watch?v=y4WyuiWK6lw
+https://www.youtube.com/watch?v=n0wNrsSdS9w
+</code></pre>
+
+<p>Now  in the final step, execute the command to download all the files to the <code>~/Music/</code> location.</p>
+
+<pre><code>$youtube-dl -a datasciencevideos.txt</code></pre>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>&copy; fortuneWalla 2013-2014 Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
